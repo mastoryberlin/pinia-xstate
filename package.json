@@ -1,6 +1,6 @@
 {
   "name": "pinia-xstate",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "files": [
     "dist"
   ],
@@ -15,6 +15,7 @@
   "scripts": {
     "build-fast": "tsup src/index.ts --format cjs,esm",
     "build": "pnpm run build-fast -- --dts-resolve --minify",
+    "dts": "tsup src/index.ts --format cjs,esm --dts-only",
     "test": "vitest run",
     "release": "bumpp --commit --push --tag && pnpm publish",
     "prepublishOnly": "pnpm run build"
