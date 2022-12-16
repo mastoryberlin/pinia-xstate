@@ -11,11 +11,7 @@ function xstate(machine, interpreterOptions, initialState = machine.initialState
         state.value = nextState;
       }
     }).start(State.create(initialState));
-    return {
-      state,
-      send: markRaw(service.send),
-      service: markRaw(service)
-    };
+    return markRaw(service);
   };
 }
 var src_default = xstate;

@@ -35,11 +35,7 @@ function xstate(machine, interpreterOptions, initialState = machine.initialState
         state.value = nextState;
       }
     }).start(import_xstate.State.create(initialState));
-    return {
-      state,
-      send: (0, import_vue.markRaw)(service.send),
-      service: (0, import_vue.markRaw)(service)
-    };
+    return (0, import_vue.markRaw)(service);
   };
 }
 var src_default = xstate;
